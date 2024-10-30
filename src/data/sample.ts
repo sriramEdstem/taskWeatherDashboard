@@ -31,6 +31,68 @@ export const weatherData = [
     },
   },
   {
+    cityId: "COK",
+    name: "Cochin",
+    current: {
+      temp: 22,
+      condition: "Partly Cloudy",
+      humidity: 65,
+      windSpeed: 12,
+      pressure: 1015,
+      visibility: 10,
+    },
+    hourly: [
+      {
+        time: "12:00",
+        temp: 22,
+        condition: "Partly Cloudy",
+      },
+      {
+        time: "13:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      // ... more hourly data
+    ],
+    forecast: {
+      maxTemp: 25,
+      minTemp: 18,
+      sunrise: "06:30",
+      sunset: "20:15",
+    },
+  },
+  {
+    cityId: "TKY",
+    name: "Tokyo",
+    current: {
+      temp: 22,
+      condition: "Partly Cloudy",
+      humidity: 65,
+      windSpeed: 12,
+      pressure: 1015,
+      visibility: 10,
+    },
+    hourly: [
+      {
+        time: "12:00",
+        temp: 22,
+        condition: "Partly Cloudy",
+      },
+      {
+        time: "13:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      // ... more hourly data
+    ],
+    forecast: {
+      maxTemp: 25,
+      minTemp: 18,
+      sunrise: "06:30",
+      sunset: "20:15",
+    },
+  },
+  {
     cityId: "LON",
     name: "London",
     current: {

@@ -1,10 +1,13 @@
 import React from "react";
 import WeatherCard from "@/components/WeatherCard";
 import { weatherData } from "@/data/sample";
+import Link from "next/link";
 
 export default function Home() {
   const weatherGrid = weatherData.map((city) => (
-    <WeatherCard key={city.cityId} city={city} />
+    <Link key={city.cityId} href={`/cities/${city.cityId}`}>
+      <WeatherCard city={city} />
+    </Link>
   ));
 
   return (
