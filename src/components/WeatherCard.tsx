@@ -62,14 +62,14 @@ export default function WeatherCard({ city }: { city: City }) {
           <div className="flex justify-between">
             <p className="text-sm">Last Updated: {timeStamp}</p>
           </div>
-          <div className="flex justify-between">
-            <button className="hover:scale-105 rounded-lg bg-yellow-500 p-1	">
+          <div className="flex justify-between items-center">
+            <button className="hover:scale-105 rounded-lg bg-yellow-500 h-10 p-2	">
               <Link key={city.cityId} href={`/cities/${city.cityId}`}>
                 Detailed view
               </Link>
             </button>
-            <button className="hover:scale-105 rounded-lg bg-blue-500 p-1	">
-              STAR
+            <button className="hover:scale-105 rounded-lg text-5xl text-yellow-500 p-1	">
+              ★
             </button>
           </div>
         </div>
