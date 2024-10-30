@@ -9,9 +9,11 @@ export default function Home() {
   ));
 
   return (
-    <div>
+    <div className=" text-center p-10">
       <Link href={"/favourites"}>
-        <button>View favourties</button>
+        <button className=" rounded-lg p-3 bg-yellow-500">
+          View favourties
+        </button>
       </Link>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {weatherGrid}

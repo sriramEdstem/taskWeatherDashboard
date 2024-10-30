@@ -28,6 +28,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <h1 className="text-center p-2 text-slate-800 text-5xl font-medium">
+          Weather Forecast
+        </h1>
         {children}
       </body>
     </html>
