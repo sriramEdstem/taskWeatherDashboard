@@ -1,6 +1,6 @@
 export default function CityDetails() {
   return(
-     <div className="container mx-auto p-3 bg-amber-500 bg-cover text-center ">
+     <div className="container w-[1400px] mx-auto p-3 bg-amber-500 bg-cover text-center ">
      
 <h1 className="text-2xl font-bold mb-4 text-white">tvm</h1>
 <div className="bg-white bg-opacity-70 shadow-md p-4 rounded-lg mb-4">
