@@ -21,9 +21,8 @@ interface City {
     minTemp: number;
     sunrise: string;
     sunset: string;
-    };
-    }
-    
+    }};
+
     export default function UnitConverter({ city, updateTemperature }: UnitConversion) {
     const [isCelsius, setIsCelsius] = useState(true);
     
@@ -54,7 +53,6 @@ interface City {
         </button>
         )}
         </div>
-        );
-        }
+    ) }
         
     
