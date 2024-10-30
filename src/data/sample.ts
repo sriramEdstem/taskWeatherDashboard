@@ -21,7 +21,41 @@ export const weatherData = [
         temp: 23,
         condition: "Sunny",
       },
-      // ... more hourly data
+      {
+        time: "14:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "15:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "16:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "17:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "18:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "19:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "20:00",
+        temp: 23,
+        condition: "Sunny",
+      },
     ],
     forecast: {
       maxTemp: 25,
@@ -49,6 +83,41 @@ export const weatherData = [
       },
       {
         time: "13:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "14:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "15:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "16:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "17:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "18:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "19:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "20:00",
         temp: 23,
         condition: "Sunny",
       },
@@ -83,6 +152,41 @@ export const weatherData = [
         temp: 23,
         condition: "Sunny",
       },
+      {
+        time: "14:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "15:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "16:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "17:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "18:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "19:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "20:00",
+        temp: 23,
+        condition: "Sunny",
+      },
       // ... more hourly data
     ],
     forecast: {
@@ -111,8 +215,43 @@ export const weatherData = [
       },
       {
         time: "13:00",
-        temp: 19,
-        condition: "Cloudy",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "14:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "15:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "16:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "17:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "18:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "19:00",
+        temp: 23,
+        condition: "Sunny",
+      },
+      {
+        time: "20:00",
+        temp: 23,
+        condition: "Sunny",
       },
       // ... more hourly data
     ],
