@@ -38,14 +38,14 @@ export default function WeatherCard({ city }: { city: City }) {
   });
 
   return (
-    <div
-      onClick={() => {
-        addCity(city);
-        console.log(favourites);
-      }}
-      className="w-[350px] bg-gradient-to-r  from-blue-500 to-violet-500 rounded-xl border-black border shadow-lg m-3"
-    >
-      <div className="w-[350px] bg-gradient-to-r from-blue-500 to-violet-500 rounded-xl shadow-lg m-3">
+    <div>
+      <div
+        onClick={() => {
+          addCity(city);
+          console.log(favourites);
+        }}
+        className="w-[350px] bg-gradient-to-r from-blue-500 to-violet-500 rounded-xl shadow-lg m-3"
+      >
         <div className="text-white p-4">
           <h2>{city.name}</h2>
           <p className="text-lg">

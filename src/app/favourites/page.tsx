@@ -5,7 +5,6 @@ import { useFavouriteStore } from "./_store";
 
 export default function Favourites() {
   const { favourites } = useFavouriteStore((state) => state);
-  console.log(favourites);
   const weatherGrid = favourites.map((city) => (
     <WeatherCard key={city.cityId} city={city} />
   ));
