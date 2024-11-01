@@ -121,7 +121,6 @@ export const weatherData = [
         temp: 23,
         condition: "Sunny",
       },
-      // ... more hourly data
     ],
     forecast: {
       maxTemp: 25,
@@ -187,7 +186,6 @@ export const weatherData = [
         temp: 23,
         condition: "Sunny",
       },
-      // ... more hourly data
     ],
     forecast: {
       maxTemp: 25,
@@ -253,7 +251,7 @@ export const weatherData = [
         temp: 23,
         condition: "Sunny",
       },
-      // ... more hourly data
+
     ],
     forecast: {
       maxTemp: 20,

@@ -1,6 +1,3 @@
-interface City{
-
-}
 export default function CityDetail(){
     return(
         <div className="container mx-auto p-2">
