@@ -36,7 +36,7 @@ export default function WeatherDashboard() {
           No cities found matching "{searchTerm}"
         </div>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
           {filteredCities.map((city) => (
             <WeatherCard key={city.cityId} city={city} />
           ))}

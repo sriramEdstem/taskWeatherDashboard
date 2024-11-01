@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { useFavouriteStore } from "@/app/favourites/_store";
 import Link from "next/link";
+import { FaCloud } from "react-icons/fa";
+import { WiDaySunny, WiCloud, WiRaindrop, WiWindy } from "react-icons/wi";
 
 interface City {
   cityId: string;
@@ -29,14 +31,24 @@ export default function WeatherCard({ city }: { city: City }) {
     setUnit(type);
   };
 
+  const conditionIcon = {
+    Sunny: <WiDaySunny className="text-yellow-400 text-4xl" />,
+    Cloudy: <WiCloud className="text-gray-300 text-4xl" />,
+    Rainy: <WiRaindrop className="text-blue-400 text-4xl" />,
+  }[city.current.condition] || <WiWindy className="text-gray-300 text-4xl" />;
+
+
   return (
-    <div className="bg-gradient-to-br from-purple-400 to-purple-600 text-white rounded-2xl p-6 shadow-xl flex flex-col justify-between w-[480px] h-[280px]">
+    <div className="bg-gradient-to-br from-purple-400 to-purple-600 text-white rounded-2xl p-6 shadow-xl flex flex-col justify-between w-[400px] h-[280px]">
       <div className="flex justify-between items-center">
         <div>
           <h2 className="text-2xl font-bold">{city.name}</h2>
+          <FaCloud />
+
           <p className="text-3xl font-semibold">{currentTemp}°{unit}</p>
           <p className="text-sm text-gray-200">{city.current.condition}</p>
         </div>
+        <div>{conditionIcon}</div>
       </div>
 
       <div className="flex gap-4 mt-4 text-gray-300">
