@@ -28,10 +28,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <h1 className="text-center p-2 text-yellow-700 text-5xl font-medium">
-          Weather Forecast
-        </h1>
+         <div className="bg-gradient-to-r from-indigo-300 to-sky-500 min-h-screen relative">
+          <header className="py-8 text-center text-yellow-700">
+            <h1 className="text-6xl font-extrabold tracking-wide">
+              Weather Forecast
+            </h1>
+          </header>
         {children}
+        </div>
       </body>
     </html>
   );

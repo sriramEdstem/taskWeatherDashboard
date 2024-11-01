@@ -11,17 +11,18 @@ export default function Home() {
   ));
 
   return (
-    <div className="">
+    <div className="relative overflow-hidden">
       <div className="absolute -z-10 inset-0">
         <Image
           src={Window}
-          alt="car factory"
+          alt="scenic cloud"
           fill
           style={{ objectFit: 'cover' }}
+          className="opacity-70"
         />
       </div>
       <Link href={"/favourites"}>
-      <button className=" rounded-lg p-3 bg-yellow-500">
+      <button className=" rounded-full p-4 bg-yellow-500 hover:bg-yellow-600 text-white transition-all transform hover:scale-105 shadow-lg fixed top-8 right-8">
           View favourties
         </button>
               </Link>
