@@ -5,13 +5,12 @@ import React from "react";
 export default function Home() {
 
   return (
-    
       <>
       <Link href={"/favourites"}>
-      <button className="rounded-full p-4 bg-yellow-500 hover:bg-yellow-600 text-white transition-all transform hover:scale-105 shadow-lg fixed top-8 right-8">
+      <button className="absolute top-12 right-8 rounded-full px-4 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold text-lg shadow-lg  transform transition-all hover:scale-105 ">
         View Favourites
       </button>
-    </Link><div className="container ">
+    </Link><div className="container mt-7 ">
         <WeatherDashboard />
       </div>
       </>

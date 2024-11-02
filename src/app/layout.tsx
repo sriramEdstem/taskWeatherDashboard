@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-
+import { WiDaySunny } from "react-icons/wi";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,11 +27,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="min-h-screen bg-gradient-to-br from-blue-300 via-purple-400 to-purple-500 flex flex-col items-center p-6">
-          <header className="text-center text-white py-10">
-            <h1 className="text-5xl font-extrabold mb-6">Weather Dashboard</h1>
-            
-          </header>
+        <div className="min-h-screen bg-gradient-to-br from-blue-300 via-purple-400 to-purple-500 flex flex-col items-center">
+        <header className="flex justify-center ">
+      <div className="flex items-center gap-3 mt-10  text-white  rounded-2xl ">
+        <WiDaySunny className="text-yellow-300 text-6xl drop-shadow-lg" />
+
+        <h1 className="text-6xl font-extrabold drop-shadow-md">
+          Weather Dashboard
+        </h1>
+      </div>
+    </header>
           <main className="flex justify-between p-4">
           {children}
           </main>

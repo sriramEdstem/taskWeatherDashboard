@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { weatherData } from "../data/sample"; // Update this import path as needed
-import WeatherCard from "./WeatherCard"; // Update this import path as needed
+import { weatherData } from "../data/sample";
+import WeatherCard from "./WeatherCard"; 
 
 export default function WeatherDashboard() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -20,8 +20,8 @@ export default function WeatherDashboard() {
   };
 
   return (
-    <div className="container mx-auto px-4">
-      <div className="mb-8 w-full flex justify-center">
+    <div className="container ">
+      <div className="mb-8 w-full flex items-center justify-center">
         <input
           type="text"
           placeholder="Search for a city..."
@@ -33,7 +33,7 @@ export default function WeatherDashboard() {
 
       {filteredCities.length === 0 ? (
         <div className="text-center text-white text-xl">
-          No cities found matching "{searchTerm}"
+          No cities found matching {searchTerm};
         </div>
       ) : (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">

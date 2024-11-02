@@ -63,12 +63,14 @@ export default function WeatherCard({ city }: { city: City }) {
 
       <div className="mt-4 flex justify-between items-center">
         <button
-          onClick={() =>
-            updateTemperature(
-              unit === "Celsius" ? (currentTemp * 9) / 5 + 32 : ((currentTemp - 32) * 5) / 9,
-              unit === "Celsius" ? "Fahrenheit" : "Celsius"
-            )
-          }
+        onClick={() =>
+          updateTemperature(
+            unit === "Celsius"
+              ? parseFloat(((currentTemp * 9) / 5 + 32).toFixed(1))
+              : parseFloat((((currentTemp - 32) * 5) / 9).toFixed(1)),
+            unit === "Celsius" ? "Fahrenheit" : "Celsius"
+          )
+        }
           className="px-4 py-2 bg-white/10 rounded-full text-sm hover:bg-white/20 transition"
         >
           Switch to {unit === "Celsius" ? "°F" : "°C"}
