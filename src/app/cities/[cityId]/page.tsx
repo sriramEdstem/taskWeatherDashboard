@@ -13,8 +13,8 @@ export default async function CityDetails(props: any) {
     <div className=" mt-8 bg-gradient-to-br from-blue-300 via-purple-500 to-pink-500     text-white">
 
       <div className=" w-[1280px]  bg-white bg-opacity-70 rounded-lg shadow-2xl p-8 space-y-10">
-        <h1 className="text-5xl font-medium text-gray-600 flex items-center gap-3 mb-4">
-          <WiCloud className="text-6xl text-gray-600 animate-pulse" />
+        <h1 className="text-5xl font-medium text-gray-600 flex items-center gap-2 mb-4">
+          <WiCloud className="text-6xl  text-blue-400 animate-pulse" />
           {city.name}
         </h1>
 
