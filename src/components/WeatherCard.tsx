@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useFavouriteStore } from "@/app/favourites/_store";
 import Link from "next/link";
 import { FaCloud } from "react-icons/fa";
@@ -18,18 +18,20 @@ interface City {
   forecast: {
     maxTemp: number;
     minTemp: number;
+    sunrise: string;
+    sunset: string;
   };
 }
 
 export default function WeatherCard({ city }: { city: City }) {
+  const { favourites } = useFavouriteStore((state) => state);
   const { addCity } = useFavouriteStore((state) => state);
   const [currentTemp, setCurrentTemp] = useState(city.current.temp);
   const [unit, setUnit] = useState("Celsius");
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 500);
-  }, []);
+  const isFavourite = favourites.some(
+    (favCity) => favCity.cityId === city.cityId
+  );
 
   const updateTemperature = (temp: number, type: string) => {
     setCurrentTemp(temp);
@@ -42,15 +44,15 @@ export default function WeatherCard({ city }: { city: City }) {
     Rainy: <WiRaindrop className="text-blue-400 text-4xl" />,
   }[city.current.condition] || <WiWindy className="text-gray-300 text-4xl" />;
 
-  return loading ? (
-    <div className="bg-gray-300 animate-pulse w-[400px] h-[280px] rounded-2xl"></div>
-  ) : (
+  return (
     <div className="bg-gradient-to-br from-purple-400 to-purple-600 text-white rounded-2xl p-6 shadow-xl flex flex-col justify-between w-[400px] h-[280px]">
       <div className="flex justify-between items-center">
         <div>
           <h2 className="text-2xl font-bold">{city.name}</h2>
           <FaCloud />
-          <p className="text-3xl font-semibold">{currentTemp}°{unit}</p>
+          <p className="text-3xl font-semibold">
+            {currentTemp}°{unit}
+          </p>
           <p className="text-sm text-gray-200">{city.current.condition}</p>
         </div>
         <div>{conditionIcon}</div>
@@ -86,7 +88,9 @@ export default function WeatherCard({ city }: { city: City }) {
         </Link>
         <button
           onClick={() => addCity(city)}
-          className="text-2xl hover:text-yellow-400 transition"
+          className={`text-2xl ${
+            isFavourite ? "text-yellow-400" : ""
+          } hover:text-yellow-400 transition`}
         >
           ★
         </button>

@@ -1,15 +1,14 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { weatherData } from "../data/sample";
-import WeatherCard from "./WeatherCard"; 
+import WeatherCard from "./WeatherCard";
 
 export default function WeatherDashboard() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredCities, setFilteredCities] = useState(weatherData);
-  const [loading, setLoading] = useState(true);
 
-  const handleSearch = (e) => {
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setSearchTerm(value);
 
@@ -19,13 +18,6 @@ export default function WeatherDashboard() {
 
     setFilteredCities(filtered);
   };
-
-  useEffect(() => {
-    setTimeout(() => {
-      setFilteredCities(weatherData);
-      setLoading(false);
-    }, 1000);
-  }, []);
 
   return (
     <div className="container">
@@ -39,13 +31,10 @@ export default function WeatherDashboard() {
         />
       </div>
 
-      {loading ? (
+      {filteredCities.length === 0 ? (
         <div className="text-center text-white text-xl">
-          Loading...
-        </div>
-      ) : filteredCities.length === 0 ? (
-        <div className="text-center text-white text-xl">
-          No cities found matching for <span className="font-bold">{searchTerm}</span>
+          No cities found matching for{" "}
+          <span className="font-bold">{searchTerm}</span>
         </div>
       ) : (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
